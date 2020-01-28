@@ -13,20 +13,20 @@ class CuboidMaker{
 	this.length = length;	
 	this.width = width;	
 	this.height = height;	
-	}
+	};
 
 
 volume() {
 	return this.length * this.width * this.height
-	}
+	};
 
 surfaceArea() {
-	return this.length * this.width * this.length * this.height * this.width * this.height
-	}
+	return 2 * ( this.length * this.width + this.length * this.height + this.width * this.height)	
+      };
 } 
 
 
-const cuboid = new CuboidMaker(3,5,5);
+const cuboid = new CuboidMaker(4,5,5);
 
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
